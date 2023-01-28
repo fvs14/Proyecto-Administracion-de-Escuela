@@ -1,0 +1,23 @@
+﻿@model List<Alumno>
+
+<strong>Lista de Asignturas</strong>
+<table class="table table-dark table-hover">
+    <thead >
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var alumno in @Model)
+    {
+        <tr>
+            <td>@alumno.UniqueId</td>
+            <td>@alumno.Nombre</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+

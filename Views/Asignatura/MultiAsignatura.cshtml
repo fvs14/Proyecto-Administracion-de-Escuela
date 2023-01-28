@@ -1,0 +1,29 @@
+﻿@model List<Asignatura>
+
+<strong>Lista de Asignturas</strong>
+<table class="table table-dark table">
+    <thead >
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var asignatura in Model)
+    {
+        <tr>
+            <td>@asignatura.UniqueId</td>
+            <td>@asignatura.Nombre</td>
+        </tr>
+    }
+    </tbody>
+</table>
+@* sin formato de tabla 
+	@foreach (var asignatura in Model)
+		{
+		<partial name="AsignaturaSimple" model="asignatura"/> 
+		}
+*@
+
+
+
