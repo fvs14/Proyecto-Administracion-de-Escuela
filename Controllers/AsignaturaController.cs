@@ -10,7 +10,7 @@ namespace ProyectoMVC.Controllers
         {
            var Asignatura=new Asignatura();
             Asignatura.Nombre="Español";
-             Asignatura.UniqueId= Guid.NewGuid().ToString();
+             Asignatura.Id= Guid.NewGuid().ToString();
            
             return View(Asignatura);
 
@@ -21,20 +21,20 @@ namespace ProyectoMVC.Controllers
         {
             var listaAsignaturas = new List<Asignatura>(){
                             new Asignatura{Nombre="Matemáticas",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             } ,
                             new Asignatura{Nombre="Educación Física",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             },
                             new Asignatura{Nombre="Castellano",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             },
                             new Asignatura{Nombre="Ciencias Naturales",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             }
                             ,
                             new Asignatura{Nombre="Programación",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             }
                 };
 

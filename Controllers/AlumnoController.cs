@@ -2,6 +2,11 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoMVC.Models;
 
+
+using System.Linq;
+using System.Collections.Generic;
+using ProyectoMVC.Models;
+
 namespace ProyectoMVC.Controllers
 {
     public class AlumnoController : Controller
@@ -10,7 +15,7 @@ namespace ProyectoMVC.Controllers
         {
            var Alumno=new Alumno();
             Alumno.Nombre="Pepe Perez";
-             Alumno.UniqueId= Guid.NewGuid().ToString();
+            Alumno.Id= Guid.NewGuid().ToString();
            
             return View(Alumno);
 
@@ -21,20 +26,20 @@ namespace ProyectoMVC.Controllers
         {
             var listaAlumnos = new List<Alumno>(){
                             new Alumno{Nombre="Juan Ramirez",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             } ,
                             new Alumno{Nombre="Ana Lopez",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             },
                             new Alumno{Nombre="Juanito Sanchez",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             },
                             new Alumno{Nombre="Pedro Cascante",
-                                UniqueId= Guid.NewGuid().ToString()
+                               Id= Guid.NewGuid().ToString()
                             }
                             ,
                             new Alumno{Nombre="Kevin Perez",
-                                UniqueId= Guid.NewGuid().ToString()
+                                Id= Guid.NewGuid().ToString()
                             }
                 };
 
