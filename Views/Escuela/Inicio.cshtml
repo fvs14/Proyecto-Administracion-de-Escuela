@@ -3,21 +3,50 @@
     ViewData["Title"] = "Información Escuela";
 }
 
-<h1>@ViewBag.Saludo</h1>
-<h1>@ViewData["Saludo"]</h1>
-<h4>Escuelas:</h4>
-<p>Nombre: @Model.Nombre</p>
-<p>Tipo: @Model.TipoEscuela</p>
-<address>
-    <p>Dirección:@Model.Dirección</p>
-    <p>País:@Model.Pais</p>
-    <p>Ciudad:@Model.Ciudad</p>   
-</address>
-<p>Año: @Model.AñoDeCreación</p>
-
-<a href="/alumno">Alumno</a>
-<a href="/alumno/multialumno">Lista Alumnos</a>
-
-<a href="/asignatura">Asignatura</a>
-<a href="/asignatura/multiasignatura">Lista Asignaturas</a>
-
+<body>
+    @* <h3>@ViewData["Saludo"]</h3> *@
+    <section class="main-section">
+        <div class="caja_img">
+        <img  src="/img/img1.jpg" alt="imagen figuras papel">
+    </div>
+    <h3>@ViewBag.Saludo</h3>
+        <div class="caja">
+            <h4>Información de la escuela:</h4>
+            <p>Nombre: @Model.Nombre</p>
+            <p>Tipo: @Model.TipoEscuela</p>
+            <address>
+                <p>Dirección:@Model.Dirección</p>
+                <p>País:@Model.Pais</p>
+                <p>Ciudad:@Model.Ciudad</p>   
+            </address>
+            <p>Año: @Model.AñoDeCreación</p>
+        </div>
+    </section>
+        <form>	
+            <h3 id="Pre-AprobacinId">Contactenos</h3>
+            <div class="form-group">
+                <label for="">Nombre Completo</label>
+                <input type="text"class="form-control" name="nom_form" placeholder="Nombre"required />
+            </div>	
+            <div class="form-group">
+                <label for="">Cédula</label>
+                <input type="text"class="form-control" name="nom_form" placeholder="#####"required />
+            </div>	
+            <div class="form-group">
+                <label for="">Teléfono</label>
+                <input type="text"class="form-control" name="nom_form" placeholder="888888"required />
+            </div>
+            <div class="form-group">
+                <label for="">Correo Electrónico</label>
+                <input type="email"class="form-control" name="nom_form" placeholder="ejemplo@dominio.com"required />
+                
+            </div>	
+            <div class="form-group">
+               <label for="">Mensaje</label>
+                <textarea rows="5" cols="60" name="text" placeholder="Escriba su mensaje"></textarea>
+            </div>				
+            
+            <button type="submit" class="btn btn-primary ml-4 mt-4">Enviar</button>
+        </form> 
+    </div>
+</body>

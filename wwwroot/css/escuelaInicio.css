@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body{
+    background: linear-gradient(141deg, #626565 0%, #9fa2a2 51%, #4a4b4b 75%);
+}
+
+p{
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(47, 47, 47);
+    font-size: 15px;
+    font-weight: 700;
+}
+.caja li{
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(47, 47, 47);
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+
+h3{
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(237, 241, 239);
+    text-align: center;
+    font-size: 35px;
+    padding:2px;
+}
+.caja_img, img{
+height: 400px;
+width: 100%;
+}
+
+h4{
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(246, 243, 243);
+    padding:5px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#icono{ 
+    max-width: 500px; 
+    max-height: 90px; 
+    float: left;
+    margin-top: 7px;
+    padding: 5px;
+}
+
+.menu { 
+    
+    background: rgb(2, 70, 72); 
+    padding-bottom: 40px; 
+    padding-left: 10px; 
+    width: 100%;
+    position: fixed; 
+    top: 0px; 
+    z-index : 10000;
+}
+
+.menu li { 
+    display: inline-block;  
+    margin-bottom: -2%;
+}
+
+.menu li a { 
+    padding :20px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 3px 3px 3px rgba(90, 89, 89, 0.8); 
+}
+
+.menu li a:hover { 
+    color:rgb(232, 238, 232); 
+    background-color: rgba(128, 126, 126, 0.6);
+    text-shadow: 3px 3px 3px rgba(0,0,0,.8);
+    border-radius: 8%;
+    border-color: rgb(255, 255, 255);
+    border-style: ridge;
+    -webkit-transition: background-color 1.5s;
+    -moz-transition: background-color 1.5s;
+    transition: background-color 1.5s;
+}
+
+.menu-scrolled{
+    background-color: rgb(3, 3, 3) !important;
+    transition: background-color 200ms linear;
+}
+
+.main-section{
+    background: rgba(219, 218, 218, 0.753); 
+    width:55%; 
+    margin : 15px auto ; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    border-color: rgb(255, 255, 255);
+    border-style: ridge;
+    border-radius: 2px;
+    margin-top: 120px;
+    padding: 5px;
+}
+
+.main-section p{
+ text-align: center;
+ font-size: 17px;
+ margin: 10px;
+}
+
+form{ 
+    padding: 60px; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    
+   background-color:rgb(2, 70, 72); 
+   color: rgba(255, 255, 255, 0.753);
+}
+textarea{
+    width: 100%;
+}
+
+footer {
+    font-size: 15px; 
+    padding-top :0px; 
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background:rgb(0, 0, 0,0.9); 
+    padding-bottom: 1px;
+   
+}
+
+.Pfotter{
+    text-align: center;
+    padding-top :5px; 
+    padding-bottom :5px; 
+    color: rgb(255, 255, 255);
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 3px 3px 3px rgba(95, 95, 95, 0.8); 
+}
+
+#row-footer-id{
+    padding: 0px;
+    margin: 0px;
+}
+
+@media (max-width: 1225px) {  /*cuando la pantalla tenga este tamño usar estas reglas*/
+    
+    .main-section{
+        width: 80%;
+        margin-top: 145px;
+    }
+
+    #icono{ 
+        max-width: 200px; 
+        max-height: 90px; 
+        float: left;
+        padding-top: 5px;
+    }  
+   
+
+}
+
+@media (max-width: 900px){
+
+     li a {
+        display: none;
+    }
+    
+    h3{
+        font-size: 25px;
+    }
+        
+    .Pfotter{
+        font-size: 100%;
+    }
+
+    .caja_img, img{
+        height: 200px;
+        width: 100%;
+    }
+
+    .menu { 
+        padding-bottom: 20px; 
+        padding-left: 10px; 
+    }    
+        
+}

@@ -1,29 +1,48 @@
-﻿@model List<Asignatura>
+﻿@* @model List<Asignatura> *@
+@model IEnumerable<Asignatura>
 
-<strong>Lista de Asignturas</strong>
-<table class="table table-dark table">
-    <thead >
-    <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nombre</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var asignatura in Model)
-    {
-        <tr>
-            <td>@asignatura.Id</td>
-            <td>@asignatura.Nombre</td>
-        </tr>
-    }
-    </tbody>
-</table>
-@* sin formato de tabla 
-	@foreach (var asignatura in Model)
-		{
-		<partial name="AsignaturaSimple" model="asignatura"/> 
-		}
-*@
+
+<body>
+    
+    @* <h3>@ViewBag.Saludo</h3>
+    <h3>@ViewData["Saludo"]</h3> *@
+    <section class="main-section">
+        <div class="caja">
+            <strong>Lista de Asignturas</strong>
+            <table class="table table-dark table-hover">
+                <thead >
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Id Grupo</th>
+                    <th scope="col">Nombre</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var asignatura in Model)
+                {
+                    <tr>
+                        <td>@asignatura.Id</td>
+                        <td>@asignatura.CursoId</td>
+                        <td>@asignatura.Nombre</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </section>
+    </div>
+    
+</body>
+
+
+
+
+
+
+
+
+
+
 
 
 

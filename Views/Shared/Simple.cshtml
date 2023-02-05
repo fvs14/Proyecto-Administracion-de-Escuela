@@ -4,14 +4,57 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/escuelainicio.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProyectoMVC.styles.css" asp-append-version="true" />
 </head>
 <body>
+
+    <nav >
+        <ul class="menu"> 
+            <li><header><img id="icono" class="clase" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Round_Landmark_School_Icon_-_Transparent.svg/1200px-Round_Landmark_School_Icon_-_Transparent.svg.png" alt="icono escuela"></header></li>
+             <li><a href="/escuela/inicio">Inicio</a></li>
+            @* <li><a href="/alumno">Alumno</a></li> *@
+            <li> <a href="/alumno/multialumno">Lista Alumnos</a></li>
+            @* <li> <a href="/asignatura">Asignatura</a></li> *@
+            <li><a href="/asignatura/multiasignatura">Lista Asignaturas</a></li> 
+            @* <li><a href="/evaluaciones/multievaluaciones">Lista Evaluaciones</a></li>         *@
+            <li><a href="/curso/multicurso">Lista Grupos</a></li>               
+         </ul>
+    </nav>
     
     
  @RenderBody()
 
-   
+ <footer>
+        
+        <div id="row-footer-id" class="row" >
+            <div class="col-sm-4">
+                <h4 id="ContactoId">Información:</h4>
+                <p class="Pfotter">Dirección:San José, Goicoechea calle 20, avenida 2</p>
+                <p class="Pfotter">Telefono :8859685</p>
+                <p class="Pfotter"> Correo :americaschool@gmail.com</p>
+            </div>
+        
+            <div class="col-sm-4">
+                <h4 >Horarios:</h4>
+                <p class="Pfotter">Lunes a Viernes de 6am a 5pm</p>
+                <p class="Pfotter">Sábados de 10am a 4pm</p>
+            </div>
+
+            <div class="col-sm-4">
+                <h4 >Redes:</h4>
+                <p class="Pfotter">Facebook : América School</p>
+                <p class="Pfotter">Twitter : América School</p>
+            </div>
+        </div>
+        
+        <div> 
+            <p class="Pfotter">COPYRIGHT © 2023</p>
+        </div> 
+    </footer>
+
+    <script src="/js/change_color_nav.js" ></script>
 </body>
 </html>

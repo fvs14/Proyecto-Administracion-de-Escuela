@@ -12,7 +12,7 @@ namespace ProyectoMVC.Controllers
         public IActionResult Inicio()
         {
           
-            ViewBag.Saludo="¡¡¡¡¡¡Hola a Todos !!!!!!!!";
+            ViewBag.Saludo="¡¡¡¡¡¡ Bienvenido !!!!!!!!";
          // se le da al contexto el dbset escuelas declarado en escuelaContext.cs
            var escuela=_context.Escuelas.FirstOrDefault();
            return View(escuela);

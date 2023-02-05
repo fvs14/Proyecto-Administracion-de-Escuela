@@ -5,22 +5,12 @@ using ProyectoMVC.Models;
 
 namespace ProyectoMVC.Controllers
 {
-    public class AlumnoController : Controller
+    public class EvaluacionesController : Controller
     {
         private EscuelaContext _context;
-        public IActionResult Inicio()
-        {
-        //    var Alumno=new Alumno();
-        //     Alumno.Nombre="Pepe Perez";
-        //     Alumno.Id= Guid.NewGuid().ToString();
-           
-        //     return View(Alumno);
-            var escuela=_context.Alumnos.FirstOrDefault();
-           return View(escuela);
+        
 
-        }
-
-         public IActionResult MultiAlumno()
+         public IActionResult MultiEvaluaciones()
         {
             // var listaAlumnos = new List<Alumno>(){
             //                 new Alumno{Nombre="Juan Ramirez",
@@ -43,11 +33,11 @@ namespace ProyectoMVC.Controllers
 
             // return View("MultiAlumno", listaAlumnos);
 
-            var escuela=_context.Alumnos.ToList();
+            var escuela=_context.Evaluaciones.ToList();
            return View(escuela);
         }
 
-        public AlumnoController (EscuelaContext context){
+        public EvaluacionesController (EscuelaContext context){
             _context = context;
         }
 

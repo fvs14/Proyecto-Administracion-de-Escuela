@@ -1,32 +1,29 @@
-﻿@* @model List<Alumno> *@
-@model IEnumerable<Alumno>
+@* @model List<Asignatura> *@
+
+
 
 <body>
     
-   
-    @* <h3>@ViewBag.Saludo</h3>
-    <h3>@ViewData["Saludo"]</h3> *@
     <section class="main-section">
         <div class="caja">
-           <strong>Lista de Alumnos</strong>
+            <strong>Lista de Grupos</strong>
             <table class="table table-dark table-hover">
                 <thead >
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Id Grupo</th>
                     <th scope="col">Nombre</th>
-                   
+                    <th scope="col">Jornada</th>
+                  
                 </tr>
                 </thead>
                 <tbody>
-                @foreach (var alumno in @Model)
+                @foreach (var curso in Model)
                 {
                     <tr>
-                        <td>@alumno.Id</td>
-                        <td>@alumno.CursoId</td>
-                        <td>@alumno.Nombre</td>
-                       
-                        
+                        <td>@curso.Id</td>
+                        <td>@curso.Nombre</td>
+                        <td>@curso.Jornada</td>
+                      
                     </tr>
                 }
                 </tbody>
@@ -36,10 +33,3 @@
     </div>
     
 </body>
-
-
-
-
-
-
-

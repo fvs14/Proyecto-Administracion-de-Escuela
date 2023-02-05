@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "diYovqyOppyzYiXLupGJNP3jJOiBn+F06tahhR7ajQU=",
+  "Hash": "nyByJXuJcwjr+Ue5bhTKdfmSrinGpAqZfYI+GgLLHt8=",
   "Source": "ProyectoMVC",
   "BasePath": "_content/ProyectoMVC",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProyectoMVC.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\wwwroot\\css\\escuelaInicio.css",
+      "SourceId": "ProyectoMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\wwwroot\\",
+      "BasePath": "_content/ProyectoMVC",
+      "RelativePath": "css/escuelaInicio.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\escuelaInicio.css"
+    },
+    {
       "Identity": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\wwwroot\\css\\site.css",
       "SourceId": "ProyectoMVC",
       "SourceType": "Discovered",
@@ -83,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\wwwroot\\img\\img1.jpg",
+      "SourceId": "ProyectoMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\wwwroot\\",
+      "BasePath": "_content/ProyectoMVC",
+      "RelativePath": "img/img1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\img1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\wwwroot\\js\\change_color_nav.js",
+      "SourceId": "ProyectoMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\wwwroot\\",
+      "BasePath": "_content/ProyectoMVC",
+      "RelativePath": "js/change_color_nav.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\change_color_nav.js"
     },
     {
       "Identity": "C:\\Users\\VINDASSILIEZARFABIAN\\Desktop\\.net\\asp-net-core\\ProyectoMVC\\wwwroot\\js\\site.js",
