@@ -1,0 +1,33 @@
+@model Evaluacion
+<section class="main-section">
+    <div class="caja">
+         <div asp-validation-summary="All"></div>
+        <form method="POST">	
+            <h3 id="Pre-AprobacinId">Insertar Evaluación</h3>
+            <div class="form-group">
+                <label asp-for="Nota">Nota</label>
+                <input type="number"class="form-control" asp-for="Nota" placeholder="0"/>
+            </div>
+             <div class="form-group">
+                <label asp-for="AlumnoId">Alumno</label>
+                 <select asp-for="AlumnoId">
+                @foreach (var alumn in @ViewBag.LAlum)
+                { 
+                   <option value=@alumn.Id>Nombre: @alumn.Nombre / ID: @alumn.Id</option>
+                }
+                </select>  
+            </div>		
+            <button type="submit" class="btn btn-primary ml-4 mt-4">Ingresar</button>	
+            <div class="form-group">
+                <label asp-for="AsignaturaId">Asigntura</label>
+                 <select asp-for="AsignaturaId">
+                @foreach (var asig in @ViewBag.LAsig)
+                { 
+                   <option value=@asig.Id>Nombre: @asig.Nombre / ID: @asig.Id</option>
+                }
+                </select>  
+            </div>
+            
+        </form>  
+    </div>
+</section>

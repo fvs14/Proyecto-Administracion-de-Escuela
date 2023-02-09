@@ -14,13 +14,36 @@
     <nav >
         <ul class="menu"> 
             <li><header><img id="icono" class="clase" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Round_Landmark_School_Icon_-_Transparent.svg/1200px-Round_Landmark_School_Icon_-_Transparent.svg.png" alt="icono escuela"></header></li>
-             <li><a href="/escuela/inicio">Inicio</a></li>
-            @* <li><a href="/alumno">Alumno</a></li> *@
-            <li> <a href="/alumno/multialumno">Lista Alumnos</a></li>
-            @* <li> <a href="/asignatura">Asignatura</a></li> *@
-            <li><a href="/asignatura/multiasignatura">Lista Asignaturas</a></li> 
-            @* <li><a href="/evaluaciones/multievaluaciones">Lista Evaluaciones</a></li>         *@
-            <li><a href="/curso/multicurso">Lista Grupos</a></li>               
+            <li><a href="/escuela/inicio">Inicio</a></li>
+            <div class="dropdown">
+                <li class="dropbtn">Grupo</li>
+                <div class="dropdown-content">
+                    <li><a href="/grupo/creargrupo">Crear Grupo</a></li>
+                    <li><a href="/grupo/multigrupo">Lista Grupos</a></li>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li class="dropbtn">Asignatura</li>
+                <div class="dropdown-content">
+                    <li><a href="/asignatura/crearasignatura">Crear Asignatura</a></li>
+                    <li><a href="/asignatura/multiasignatura">Lista Asignaturas</a></li>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li class="dropbtn">Alumno</li>
+                <div class="dropdown-content">
+                    <li><a href="/alumno/crearalumno">Crear Alumno</a></li>
+                    <li><a href="/alumno/multialumno">Lista Alumnos</a></li>
+                </div>
+            </div>
+             <div class="dropdown">
+                <li class="dropbtn">Evaluación</li>
+                <div class="dropdown-content">
+                    <li><a href="/evaluacion/crearevaluacion">Crear Evaluacion</a></li>      
+                    <li><a href="/evaluacion/multievaluacion">Lista Evaluaciones</a></li>
+                </div>
+            </div>
+    
          </ul>
     </nav>
     

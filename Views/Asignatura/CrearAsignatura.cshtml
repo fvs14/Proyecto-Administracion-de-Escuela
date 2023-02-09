@@ -1,0 +1,29 @@
+@model Asignatura
+<section class="main-section">
+    <div class="caja">
+         <div asp-validation-summary="All"></div>
+        <form method="POST">	
+            <h3 id="Pre-AprobacinId">Insertar Asignatura</h3>
+            <div class="form-group">
+                <label asp-for="Nombre">Nombre</label>
+                <input type="text"class="form-control" asp-for="Nombre" placeholder="Nombre"/>
+            </div>	
+            <div class="form-group">
+                <label asp-for="GrupoId">Grupo Id</label>
+                 <select asp-for="GrupoId">
+                @foreach (var g in @ViewBag.LG)
+                { 
+                    @* <tr>
+                        <td>@g</td>
+                        
+                    </tr> *@
+                   <option value=@g.Id>Nombre: @g.Nombre / ID: @g.Id</option>
+    
+                    
+                }
+                </select>  
+            </div>	
+            <button type="submit" class="btn btn-primary ml-4 mt-4">Ingresar</button>
+        </form>  
+    </div>
+</section>

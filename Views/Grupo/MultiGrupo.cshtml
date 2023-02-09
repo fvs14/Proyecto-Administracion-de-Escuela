@@ -1,6 +1,5 @@
 @* @model List<Asignatura> *@
-
-
+@model IEnumerable<Grupo>
 
 <body>
     
@@ -17,12 +16,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach (var curso in Model)
+                @foreach (var grupo in Model)
                 {
                     <tr>
-                        <td>@curso.Id</td>
-                        <td>@curso.Nombre</td>
-                        <td>@curso.Jornada</td>
+                        <td>@grupo.Id</td>
+                        <td>@grupo.Nombre</td>
+                        <td>@grupo.Jornada</td>
                       
                     </tr>
                 }

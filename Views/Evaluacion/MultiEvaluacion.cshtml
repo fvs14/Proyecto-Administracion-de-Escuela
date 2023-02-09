@@ -1,5 +1,5 @@
-@* @model List<Asignatura> *@
-@model IEnumerable<Evaluaciones>
+
+@model IEnumerable<Evaluacion>
 
 
 <body>
@@ -11,19 +11,20 @@
                 <thead >
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Jornada</th>
+                    <th scope="col">Id Alumno</th>
+                    <th scope="col">Id Asignatura</th>
+                    <th scope="col">Nota</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach (var evaluaciones in Model)
+                @foreach (var evaluacion in Model)
                 {
                     <tr>
-                        <td>@evaluaciones.Id</td>
-                        <td>@evaluaciones.Nombre</td>
-                        <td>@evaluaciones.Nota</td>
-                        
-                        
+                        <td>@evaluacion.Id</td>
+                        <td>@evaluacion.AlumnoId</td>
+                         <td>@evaluacion.AsignaturaId</td>
+                        <td>@evaluacion.Nota</td>
+
                     </tr>
                 }
                 </tbody>

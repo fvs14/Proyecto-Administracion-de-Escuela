@@ -15,12 +15,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\VINDASSILIEZARFABIAN\Desktop\.net\asp-net-core\ProyectoMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Alumno/CrearAlumno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXENyZWFyQWx1bW5vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Alumno/Inicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXEluaWNpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Alumno/MultiAlumno.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXE11bHRpQWx1bW5vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Asignatura/CrearAsignatura.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hdHVyYVxDcmVhckFzaWduYXR1cmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Asignatura/Inicio.cshtml]
@@ -31,16 +39,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hdHVyYVxNdWx0aUFzaWduYXR1cmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Curso/MultiCurso.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cTXVsdGlDdXJzby5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Escuela/Inicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjdWVsYVxJbmljaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Evaluaciones/MultiEvaluaciones.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhY2lvbmVzXE11bHRpRXZhbHVhY2lvbmVzLmNzaHRtbA==
+[C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Evaluacion/CrearEvaluacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhY2lvblxDcmVhckV2YWx1YWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Evaluacion/MultiEvaluacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhY2lvblxNdWx0aUV2YWx1YWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Grupo/CrearGrupo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3J1cG9cQ3JlYXJHcnVwby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Grupo/MultiGrupo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3J1cG9cTXVsdGlHcnVwby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/VINDASSILIEZARFABIAN/Desktop/.net/asp-net-core/ProyectoMVC/Views/Home/Index.cshtml]

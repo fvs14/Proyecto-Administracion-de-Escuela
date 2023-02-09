@@ -1,0 +1,28 @@
+@model Grupo 
+<section class="main-section">
+    <div class="caja">
+        <div asp-validation-summary="All"></div>
+        <form method="POST">	
+                <h3 id="Pre-AprobacinId">Insertar Grupo</h3>
+                
+                <div class="form-group">
+                        <label asp-for="Nombre">Nombre</label>
+                        <input type="text"class="form-control" asp-for="Nombre" placeholder="Nombre"/>
+                </div>	
+                <div class="form-group">
+                    <label asp-for="Jornada">Jornada</label>
+                    @* <select asp-for="Jornada">
+                        <option value="Mañana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noche">Noche</option>
+                    </select> *@
+
+                    @Html.DropDownList(
+                    "Jornada", Html.GetEnumSelectList<TiposJornada>(),
+                    "Seleccione una jornada",
+                    new {@class = "form-control"})
+                </div>	
+                <button type="submit" class="btn btn-primary ml-4 mt-4">Ingresar</button>
+        </form>
+    </div>
+</section>  

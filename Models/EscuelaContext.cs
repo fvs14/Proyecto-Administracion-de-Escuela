@@ -10,7 +10,7 @@ namespace ProyectoMVC.Models
         public DbSet<Escuela> Escuelas { get; set; }
         public DbSet<Asignatura> Asignaturas { get; set; }
         public DbSet<Alumno> Alumnos { get; set; }
-        public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Grupo> Grupos { get; set; }
         public DbSet<Evaluacion> Evaluaciones { get; set; }
 
         
@@ -33,68 +33,76 @@ namespace ProyectoMVC.Models
             escuela.Dirección = "San José, Goicoechea calle 20, avenida 2";
             escuela.TipoEscuela = TiposEscuela.Secundaria;
 
-            //Cargar Cursos de la Escuela
-            var cursos = CargarCursos(escuela);
+            //Cargar grupos de la Escuela
+            var grupos = CargarGrupos(escuela);
 
             //x cada curso cargar asignaturas
-            var asignaturas = CargarAsignaturas(cursos);
+            var asignaturas = CargarAsignaturas(grupos);
 
              //x cada curso cargar alumnos
-            var alumnos = CargarAlumnos(cursos);
+            var alumnos = CargarAlumnos(grupos);
 
-            // var evaluaciones= CargarEvaluaciones(cursos);
+            var evaluaciones= CargarEvaluacion(alumnos,asignaturas);
 
-            // var listaAlumnos = new List<Alumno>(){
-            //                 new Alumno{Nombre="Juan Ramirez",
-            //                     Id= Guid.NewGuid().ToString()
-            //                 } ,
-            //                 new Alumno{Nombre="Ana Lopez",
-            //                     Id= Guid.NewGuid().ToString()
-            //                 },
-            //                 new Alumno{Nombre="Juanito Sanchez",
-            //                     Id= Guid.NewGuid().ToString()
-            //                 },
-            //                 new Alumno{Nombre="Pedro Cascante",
-            //                     Id= Guid.NewGuid().ToString()
-            //                 }
-            //                 ,
-            //                 new Alumno{Nombre="Kevin Perez",
-            //                     Id= Guid.NewGuid().ToString()
-            //                 }
-            //                 };
+           
             modelBuilder.Entity<Escuela>().HasData(escuela);
-            modelBuilder.Entity<Curso>().HasData(cursos.ToArray());
+            modelBuilder.Entity<Grupo>().HasData(grupos.ToArray());
             modelBuilder.Entity<Asignatura>().HasData(asignaturas.ToArray());
             modelBuilder.Entity<Alumno>().HasData(alumnos.ToArray());
-            // modelBuilder.Entity<Evaluacion>().HasData(evaluaciones.ToArray());
+            modelBuilder.Entity<Evaluacion>().HasData(evaluaciones.ToArray());
                    
         }
 
-        private List<Alumno> CargarAlumnos(List<Curso> cursos)
+        private static List<Evaluacion> CargarEvaluacion(List<Alumno> alumnos,List<Asignatura> asignaturas)
+        {
+            var listaEvaluacion = new List<Evaluacion> ();
+
+            Random rnd = new Random();
+            Random r = new Random();
+            int range = 100;
+            foreach(var alumno in alumnos){
+                
+                    foreach(var asignatura in asignaturas){
+                        if(alumno.GrupoId==asignatura.GrupoId){
+                            double num =r.NextDouble()* range;
+                            decimal num2=Math.Round((decimal)num, 2);
+                            var tmplist = new List<Evaluacion> {
+                                        new Evaluacion{Id = Guid.NewGuid().ToString(),AlumnoId = alumno.Id,AsignaturaId=asignatura.Id,Nota=num2}
+                                        };
+                            listaEvaluacion.AddRange(tmplist);
+                        }
+                    }
+                    
+                
+            }
+            return listaEvaluacion;
+        }
+
+        private List<Alumno> CargarAlumnos(List<Grupo> grupos)
         {
             var listaAlumnos = new List<Alumno>();
 
             Random rnd = new Random();
-            foreach (var curso in cursos)
+            foreach (var grupo in grupos)
             {
-                int cantRandom = rnd.Next(5, 20);
-                var tmplist = GenerarAlumnosAlAzar(curso, cantRandom);
+                int cantRandom = rnd.Next(1, 4);
+                var tmplist = GenerarAlumnosAlAzar(grupo, cantRandom);
                 listaAlumnos.AddRange(tmplist);
             }
             return listaAlumnos;
         }
 
-          private static List<Asignatura> CargarAsignaturas(List<Curso> cursos)
+          private static List<Asignatura> CargarAsignaturas(List<Grupo> grupos)
         {
             var listaCompleta = new List<Asignatura> ();
-            foreach (var curso in cursos)
+            foreach (var grupo in grupos)
             {
                 var tmpList = new List<Asignatura> {
-                            new Asignatura{Id = Guid.NewGuid().ToString(),CursoId = curso.Id,Nombre="Matemáticas"} ,
-                            new Asignatura{Id = Guid.NewGuid().ToString(), CursoId = curso.Id, Nombre="Estudios Sociales"},
-                            new Asignatura{Id = Guid.NewGuid().ToString(), CursoId = curso.Id, Nombre="Español"},
-                            new Asignatura{Id = Guid.NewGuid().ToString(), CursoId = curso.Id, Nombre="Ciencias"},
-                            new Asignatura{Id = Guid.NewGuid().ToString(), CursoId = curso.Id, Nombre="Inglés"}
+                            new Asignatura{Id = Guid.NewGuid().ToString(),GrupoId = grupo.Id,Nombre="Matemáticas"} ,
+                            new Asignatura{Id = Guid.NewGuid().ToString(), GrupoId = grupo.Id, Nombre="Estudios Sociales"},
+                            new Asignatura{Id = Guid.NewGuid().ToString(), GrupoId = grupo.Id, Nombre="Español"},
+                            new Asignatura{Id = Guid.NewGuid().ToString(), GrupoId = grupo.Id, Nombre="Ciencias"},
+                            new Asignatura{Id = Guid.NewGuid().ToString(), GrupoId = grupo.Id, Nombre="Inglés"}
                 };
                 listaCompleta.AddRange(tmpList);
                 //curso.Asignaturas = tmpList;
@@ -104,33 +112,33 @@ namespace ProyectoMVC.Models
         }
 
 
-         private static List<Curso> CargarCursos(Escuela escuela)
+         private static List<Grupo> CargarGrupos(Escuela escuela)
         {
-            return new List<Curso>(){
-                        new Curso() {Id = Guid.NewGuid().ToString(),EscuelaId = escuela.Id,Nombre = "A1",Jornada = TiposJornada.Mañana },
-                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "A2", Jornada = TiposJornada.Mañana},
-                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "A3", Jornada = TiposJornada.Mañana},
-                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "B1", Jornada = TiposJornada.Tarde },
-                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "B2", Jornada = TiposJornada.Tarde},
-                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "C1", Jornada = TiposJornada.Noche}
+            return new List<Grupo>(){
+                        new Grupo() {Id = Guid.NewGuid().ToString(),EscuelaId = escuela.Id,Nombre = "A1",Jornada = TiposJornada.Mañana },
+                        new Grupo() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "A2", Jornada = TiposJornada.Mañana},
+                        new Grupo() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "A3", Jornada = TiposJornada.Mañana},
+                        new Grupo() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "B1", Jornada = TiposJornada.Tarde },
+                        new Grupo() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "B2", Jornada = TiposJornada.Tarde},
+                        new Grupo() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "C1", Jornada = TiposJornada.Noche}
             };
         }
 
         private List<Alumno> GenerarAlumnosAlAzar(
-            Curso curso,
+            Grupo grupo,
             int cantidad)
         {
-            string[] nombre1 = { "Alba", "Felipe", "Ernesto", "Andrea", "María", "Andres", "Nicolás" };
+            string[] nombre = { "Alba", "Felipe", "Ernesto", "Andrea", "María", "Andres", "Nicolás" };
             string[] apellido1 = { "Ruiz", "Sanchez", "Uribe", "Martinez", "Jimenez", "Toledo", "Herrera" };
-            string[] nombre2 = { "Alvarado", "Vindas", "Perez", "Murillo", "Soza", "Garita", "Arroyo", "Tencio" };
+            string[] apellido2 = { "Alvarado", "Vindas", "Perez", "Murillo", "Soza", "Garita", "Arroyo", "Tencio" };
 
-            var listaAlumnos = from n1 in nombre1
-                               from n2 in nombre2
+            var listaAlumnos = from n1 in nombre
                                from a1 in apellido1
+                               from a2 in apellido2
                                select new Alumno
                                {
-                                   CursoId = curso.Id,
-                                   Nombre = $"{n1} {n2} {a1}",
+                                   GrupoId = grupo.Id,
+                                   Nombre = $"{n1} {a2} {a1}",
                                    Id = Guid.NewGuid().ToString()
                                };
 
